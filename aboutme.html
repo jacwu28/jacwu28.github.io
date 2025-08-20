@@ -33,10 +33,29 @@
         h6 {
             font-size: 18px;
         }
+        div.item{
+            padding: 10px;
+        }
+        .alice-regular {
+            font-size: 20px;
+            font-family: "Alice", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        table{
+            margin-top: 10px;
+        }
+        td{
+            font-size: 20px;
+        }
+        
     </style>
 </head>
 
 <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <p class="intro"> HELLO IM Jacqueline or you can call me JQ !
     </p>
     <p class="intro"> I am a sophomore at KAS and have been in KAS for 7 years!
@@ -56,10 +75,78 @@
     <h5> My favorite food and drink is hotpot and boba </h5>
     <h6>There are 4 people in my family my mom, my dad, my brother, and my dog</h6>
     <div style="display: flex; align-items: flex-start;">
-        <img style="width: 25%; height:auto;" src="images/GDRAGON.jpg"></img>
-        <img style="width: 25%; height:auto;" src="images/LUNA.jpg"></img>
-        <img style="width: 25%; height:auto;" src="images/ASHLEYYY.jpg"></img>
-        <img style="width: 25%; height:auto;" src="images/BASKETBALL.jpg"></img>
+        <div class="item">
+            <img style="height:200px;" src="images/GDRAGON.jpg">
+        </div>
+        <div class="item">
+            <img style="height:200px;" src="images/LUNA.jpg">
+        </div>
+        <div class="item">
+            <img style="height:200px;" src="images/ASHLEYYY.jpg">
+        </div>  
+        <div class="item">
+            <img style="height:200px;" src="images/BASKETBALL.jpg">
+        </div>
     </div>
+    <hr>
+    <div style="display: flex; align-items: flex-start;">
+        <div class="item">
+            <a href="https://www.chick-fil-a.com/" target="_blank">
+                <img src="images/chick-fill-a.jpg" height="100px">
+            </a>
+            <p class="alice-regular">
+            My favorite fast food store is chick fill a because the sauce is very different from other fast foods and the food is favorable. My favorite food is the waffle fries but I think it has to be more salt
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.kas.tw/" target="_blank">
+                <img src="images/KAS.jpg" height="100px">
+            </a>
+            <p class="alice-regular">
+            This is our school website and it has a lot of factors on the website. There is lunch, calender, teachers information.
+            </p>
+        </div>
+    </div>
+   
+    <table border="1">
+        <tr>
+            <td style="background-color:navy ;color:white;"> Name </td>
+            <td style="background-color:navy ;color:white;"> Grade </td>
+            <td style="background-color:navy ;color:white;"> Subject </td>
+        </tr>
+        <tr> 
+            <td style="background-color:white ;color:black;"> Jacqueline </td>
+            <td style="background-color:white ;color:black;"> Tenth grade</td>
+            <td style="background-color:white ;color:black;"> Computer Science</td>
+        </tr>
+    </table>  
+    <table border="1" width="100%">
+        <tr>
+            <td align="center" valign="middle">
+                <img src="images/wonder.jpg" height="200px">
+            </td>
+            <td align="center" valign="middle">
+                <img src="images/gdragonshow.jpg" height="200px">
+            </td>
+            <td align="center" valign="middle">
+                <img src="images/hotpot.jpg" height="200px">
+            </td>
+            <td align="center" valign="middle">
+                <img src="images/50blue.jpg" height="200px">
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color:#91853b;color:white; text-align: center; font-size: 28px;"> Favorite movie</td>
+            <td style="background-color:#0c83de;color:white; text-align: center; font-size: 28px;"> Favorite TV show</td>
+            <td style="background-color:#61412c;color:white; text-align: center; font-size: 28px;"> Favorite food</td>
+            <td style="background-color:#025dac;color:white; text-align: center; font-size: 28px;"> Favorite boba store</td>
+        </tr>
+   
+    </table>
+<!-- <tr></tr> table row  -->
+ <!-- <td></td> table columns -->
 </body>
 </html>
+
+
+
