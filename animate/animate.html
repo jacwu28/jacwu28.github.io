@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>let's get animated</title>
+        <link rel="stylesheet" href="animate.css">
+    </head>
+<body>
+<img id="google" src="google1.jpeg"></div>
+<div id="controlpad">
+    <!-- <div id="triangle-left" onclick="document.getElementById('google').style.left='0%';document.getElementById('google').style.right='90%';"></div> -->
+    <!-- <div id="triangle-up" onclick="document.getElementById('google').style.top='0%';document.getElementById('google').style.bottom='90%';"></div> -->
+    <!-- <div id="triangle-down" onclick="document.getElementById('google').style.bottom='0%';document.getElementById('google').style.top='75%';"></div> -->
+    <!-- <div id="triangle-right" onclick="document.getElementById('google').style.right='0%';document.getElementById('google').style.left='62%'"></div> -->
+
+    <div id="triangle-left" onclick="goLeft();"></div>
+    <div id="triangle-up" onclick="goRight();"></div>
+    <div id="triangle-down" onclick="goUp();"></div>
+    <div id="triangle-right" onclick="goDown();"></div>
+</div>
+</body>
+<script>
+    function goLeft(){
+        const google = document.getElementById('google');
+        google.style.left='0%';
+        google.style.right='90%';
+    }
+    function goRight(){
+        const google = document.getElementById('google');
+        google.style.top='0%';
+        google.style.bottom='90%';
+    }
+    function goUp(){
+        const google = document.getElementById('google');
+        google.style.bottom='0%';
+        google.style.top='75%';
+    }
+    function goDown(){
+        const google = document.getElementById('google');
+        google.style.right='0%';
+        google.style.left='62%';
+    }
+</script>
+</html>
+

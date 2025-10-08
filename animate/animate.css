@@ -1,0 +1,57 @@
+#google{
+    width:200px;
+    position:absolute;
+    left: 0%;
+    top: 0%;
+    -webkit-transition: all 1500ms ease;
+    -webkit-transition: all 1500ms ease;
+    -moz-transition: all 1500ms ease;
+    -ms-transition: all 1500ms ease;
+    -o-transition: all 1500ms ease;
+    transition: all 1500ms ease;
+}
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid blueviolet;
+    top:10px;
+    left: 80px;
+    position:absolute;
+}
+#triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid blueviolet;
+    position:absolute;
+    top: 230px;
+    left:80px;
+}
+#triangle-left{
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 100px solid blueviolet;
+    border-bottom: 50px solid transparent;
+    top: 125px;
+    left:-25px;
+    position: absolute;
+}
+#triangle-right{
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid blueviolet;
+    border-bottom: 50px solid transparent;
+    top:125px;
+    left:185px;
+    position:absolute;
+
+}
+#controlpad{
+    position:absolute;
+    left:80%;
+}
