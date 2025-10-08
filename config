@@ -1,0 +1,4 @@
+Host jacwu28
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile /Users/user/.ssh/id_ed25519
