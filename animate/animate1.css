@@ -6,4 +6,68 @@
     top:5%;
     left: 5%;
     animation:fly 5s;
+    animation-iteration-count: infinite;
+}
+#reverse{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top:5%;
+    left: 5%;
+    animation:flyaround 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes flyaround{
+    0%{
+        left:5%;
+        top:5%;
+        background-color:blue;
+    }
+    25%{
+        left:5%;
+        top:90%;
+        background-color:yellow;
+    }
+    50%{
+        left:90%;
+        top:80%;
+        background-color:brown;
+    }
+    75%{
+        left:65%;
+        top:60%;
+        background-color:red;
+    }
+    100%{
+        left:5%;
+        top:5%;
+    }
+}
+
+@keyframes fly {
+    0%{
+        left:5%;
+        top:5%;
+        background-color: red;
+    }
+    25%{
+        left:95%;
+        top:5%;
+        background-color: blue;
+    }
+    50%{
+        left:95%;
+        top:95%;
+        background-color: yellow;
+    }
+    75%{
+        left:5%;
+        top:95%;
+        background-color: brown;
+    }
+    90%{
+        left:5%;
+        top:5%;
+    }
 }
