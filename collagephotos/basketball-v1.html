@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>collage photos of basketball players</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <style>
+        body {
+            color: #000000;
+            background-color: #87CEEB;
+        }
+        p.intro {
+            color: #000080; 
+            font-family: Alice, Arial, Helvetica, sans-serif;
+            font-size: 24px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 32px;
+        }
+        h3 {
+            font-size: 28px;
+        }
+        h4 {
+            font-size: 24px;
+        }
+        h5 {
+            font-size: 20px;
+        }
+        h6 {
+            font-size: 18px;
+        }
+        div.item{
+            padding: 10px;
+        }
+        table{
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        td{
+            font-size: 20px;
+        }
+        .btn{
+            font-size: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        .button1{
+            color:rgb(253, 181, 48);
+            background-color:rgb(135, 29, 135);
+        }
+        .button2{
+            color:black;
+            background-color:rgb(250, 59, 59);
+        }
+        .button3{
+            color:purple;
+            background-color:yellow;
+        }
+        .button4{
+            color:blue;
+            background-color: gray;
+        }
+        .image-container img {
+            /* position: absolute; */
+            /* width: 100%; */
+            /* height: 100%; */
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 4s ease;
+        }
+
+        .image-container img.active {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="image-container" style="text-align: center;"> 
+        <table border="0">
+            <tr>
+                <td align="center" valign="middle">
+                    <img id="img01" src="booker/book1.jpg" height="200px" class="active">
+                </td>
+                <td align="center" valign="middle">
+                    <img id="img02" src="booker/book2.jpg" height="200px" class="active">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" valign="middle">
+                    <img id="img03" src="booker/book3.jpg" height="200px" class="active">
+                </td>
+                <td align="center" valign="middle">
+                    <img id="img04" src="booker/book4.jpg" height="200px" class="active">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" valign="middle">
+                    <img id="img05" src="booker/book5.jpg" height="200px" class="active">
+                </td>
+                <td align="center" valign="middle">
+                    <img id="img06" src="booker/book6.jpg" height="200px" class="active">
+                </td>
+            </tr>
+        </table>
+        <button id="button1" class="btn button1" onclick="change1();">Devin Booker</button>
+        <button id="button2" class="btn button2" onclick="change2();">Kevin Durant</button>
+        <button id="button3" class="btn button3" onclick="change3();">Lebron James</button>
+        <button id="button4" class="btn button4" onclick="change4();">Anothny Edwards</button>
+    </div>
+    <script>
+        const img01 = document.getElementById('img01');
+        const img02 = document.getElementById('img02');
+        const img03 = document.getElementById('img03');
+        const img04 = document.getElementById('img04');
+        const img05 = document.getElementById('img05');
+        const img06 = document.getElementById('img06');
+
+
+        function change1(){
+            img01.classList.remove('active');
+            img02.classList.remove('active');
+            img03.classList.remove('active');
+            img04.classList.remove('active');
+            img05.classList.remove('active');
+            img06.classList.remove('active');
+            img01.src="booker/book1.jpg";
+            img02.src="booker/book2.jpg";
+            img03.src="booker/book3.jpg";
+            img04.src="booker/book4.jpg";
+            img05.src="booker/book5.jpg";
+            img06.src="booker/book6.jpg";
+            img01.classList.add('active');
+            img02.classList.add('active');
+            img03.classList.add('active');
+            img04.classList.add('active');
+            img05.classList.add('active');
+            img06.classList.add('active');
+        }
+        function change2(){
+            img01.classList.remove('active');
+            img02.classList.remove('active');
+            img03.classList.remove('active');
+            img04.classList.remove('active');
+            img05.classList.remove('active');
+            img06.classList.remove('active');
+            img01.src="durant/durant1.jpg";
+            img02.src="durant/durant2.jpg";
+            img03.src="durant/durant3.jpg";
+            img04.src="durant/durant4.jpg";
+            img05.src="durant/durant5.jpg";
+            img06.src="durant/durant6.jpg";
+            img01.classList.add('active');
+            img02.classList.add('active');
+            img03.classList.add('active');
+            img04.classList.add('active');
+            img05.classList.add('active');
+            img06.classList.add('active');
+        }
+        function change3(){
+            img01.src="lebron/lebron1.jpg";
+            img02.src="lebron/lebron2.jpg";
+            img03.src="lebron/lebron3.jpg";
+            img04.src="lebron/lebron4.jpg";
+            img05.src="lebron/lebron5.jpg";
+            img06.src="lebron/lebron6.jpg";
+        }
+        function change4(){
+            img01.src="edwards/edward1.jpg";
+            img02.src="edwards/edward2.jpg";
+            img03.src="edwards/edward3.jpg";
+            img04.src="edwards/edward4.jpg";
+            img05.src="edwards/edward5.jpg";
+            img06.src="edwards/edward6.jpg"
+        }
+        
+    </script>
+</body>
+</html>
