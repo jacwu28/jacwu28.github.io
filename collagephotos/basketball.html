@@ -11,12 +11,14 @@
             background-color: #87CEEB;
         }
         p.intro {
-            color: #000080; 
+            color: #000080;
             font-family: Alice, Arial, Helvetica, sans-serif;
             font-size: 24px;
         }
         h1 {
             font-size: 36px;
+            padding: 0px;
+            margin: 2px;
         }
         h2 {
             font-size: 32px;
@@ -54,14 +56,14 @@
         }
         .button2{
             color:black;
-            background-color:rgb(250, 59, 59);
+            background-color:rgb(206, 17, 65);
         }
         .button3{
             color:purple;
             background-color:yellow;
         }
         .button4{
-            color:blue;
+            color:rgba(10, 10, 253, 0.971);
             background-color: gray;
         }
         .image-container img {
@@ -70,69 +72,104 @@
             /* height: 100%; */
             object-fit: cover;
             opacity: 0;
-            transition: opacity 4s ease;
+            transition: opacity 2s ease;
         }
 
         .image-container img.active {
             opacity: 1;
             width: 200px;
         }
-
+        .pg-row{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            width: 600px;
+        }
+        .pg-row div{
+            background-size: cover;
+            background-position: center;
+            margin: 2px;
+            position: absolute;
+        }
+        .img-photo{
+            position:absolute;
+            left: 0%;
+            top: 0%;
+            -webkit-transition: all 1500ms ease;
+            -webkit-transition: all 1500ms ease;
+            -moz-transition: all 1500ms ease;
+            -ms-transition: all 1500ms ease;
+            -o-transition: all 1500ms ease;
+            transition: all 1500ms ease;
+        }
     </style>
 </head>
 
 <body>
-    <div class="image-container" style="text-align: center;"> 
+    <div class="image-container" style="text-align: center;">
         <h1>Collage photos of NBA-players</h1>
-        <table border="0">
-            <tr>
-                <td align="center" valign="middle">
-                    <img id="img11" src="booker/book1.jpg" class="active">
-                    <img id="img21" src="durant/durant1.jpg">
-                    <img id="img31" src="lebron/lebron1.jpg">
-                    <img id="img41" src="edwards/edward1.jpg">
+        <div class="pg-row">
+            <div id="img11" class="img-photo" style="
+                width: 196px;
+                height: 180px;
+                top: 120px;
+                left: 450px;
+                background-image: url('booker/book1.jpg');
+                ">
+            </div>
 
-                </td>
-                <td align="center" valign="middle">
-                    <img id="img12" src="booker/book2.jpg" class="active">
-                    <img id="img22" src="durant/durant2.jpg">
-                    <img id="img32" src="lebron/lebron2.jpg">
-                    <img id="img42" src="edwards/edward2.jpg">
-                </td>
-            </tr>
-            <tr>
-                <td align="center" valign="middle">
-                    <img id="img13" src="booker/book3.jpg" class="active">
-                    <img id="img23" src="durant/durant3.jpg">
-                    <img id="img33" src="lebron/lebron3.jpg">
-                    <img id="img43" src="edwards/edward3.jpg">
-                </td>
-                <td align="center" valign="middle">
-                    <img id="img14" src="booker/book4.jpg" class="active">
-                    <img id="img24" src="durant/durant4.jpg">
-                    <img id="img34" src="lebron/lebron4.jpg">
-                    <img id="img44" src="edwards/edward4.jpg">
-                </td>
-            </tr>
-            <tr>
-                <td align="center" valign="middle">
-                    <img id="img15" src="booker/book5.jpg" class="active">
-                    <img id="img25" src="durant/durant5.jpg">
-                    <img id="img35" src="lebron/lebron5.jpg">
-                    <img id="img45" src="edwards/edward5.jpg">
-                </td>
-                <td align="center" valign="middle">
-                    <img id="img16" src="booker/book6.jpg" class="active">
-                    <img id="img26" src="durant/durant6.jpg">
-                    <img id="img36" src="lebron/lebron6.jpg">
-                    <img id="img46" src="edwards/edward6.jpg">
-                </td>
-            </tr>
-        </table>
-        <button id="button1" class="btn button1" onclick="change1();">Devin Booker</button>
-        <button id="button2" class="btn button2" onclick="change2();">Kevin Durant</button>
-        <button id="button3" class="btn button3" onclick="change3();">Lebron James</button>
-        <button id="button4" class="btn button4" onclick="change4();">Anothny Edwards</button>
+            <div id="img12" class="img-photo" style="
+                width: 196px;
+                height: 180px;
+                top: 120px;
+                left: 650px;
+                background-image: url('booker/book2.jpg');
+                ">
+            </div>
+
+            <div id="img13" class="img-photo" style="
+                width: 196px;
+                height: 180px;
+                top: 120px;
+                left:850px;
+                background-image: url('booker/book3.jpg');
+                ">
+            </div>
+
+            <div id="img14" class="img-photo" style="
+                width: 596px;
+                height: 280px;
+                top:305px;
+                left: 450px;
+                background-image: url('booker/book4.jpg');
+                ">
+            </div>
+
+            <div id="img15" class="img-photo" style="
+                width: 296px;
+                height: 200px;
+                top: 590px;
+                left: 750px;
+                background-image: url('booker/book5.jpg');
+                ">
+            </div>
+
+            <div id="img16" class="img-photo" style="
+                width: 296px;
+                height: 200px;
+                top: 590px;
+                left:450px;
+                background-image: url('booker/book6.jpg');
+                ">
+            </div>
+        </div>
+
+        <div style="margin: 0 auto; margin-top: 10px;">
+            <button id="button1" class="btn button1" onclick="animateImages(1);">Devin Booker</button>
+            <button id="button2" class="btn button2" onclick="animateImages(2);">Kevin Durant</button>
+            <button id="button3" class="btn button3" onclick="animateImages(3);">Lebron James</button>
+            <button id="button4" class="btn button4" onclick="animateImages(4);">Anothny Edwards</button>
+        </div>
     </div>
     <script>
         const img11 = document.getElementById('img11');
@@ -142,145 +179,80 @@
         const img15 = document.getElementById('img15');
         const img16 = document.getElementById('img16');
 
-        const img21 = document.getElementById('img21');
-        const img22 = document.getElementById('img22');
-        const img23 = document.getElementById('img23');
-        const img24 = document.getElementById('img24');
-        const img25 = document.getElementById('img25');
-        const img26 = document.getElementById('img26');
+        function animateImages(gridId){
+            img11.style.left='-20%';
+            img11.style.right='100%';
+            img12.style.top='-30%';
+            img12.style.bottom='100%';
+            img13.style.left='100%';
+            img13.style.right='-20%';
+            img14.style.top='100%';
+            img14.style.bottom='-20%';
+            img15.style.left='-30%';
+            img15.style.right='110%';
+            img16.style.left='100%';
+            img16.style.right='-20%';
+            setTimeout(function() {
+                console.log(gridId);
+                if(gridId == 1){
+                    grid1on();
+                }
+                else if(gridId == 2){
+                    grid2on();
+                }
+                else if(gridId == 3){
+                    grid3on();
+                }
+                else if(gridId == 4){
+                    grid4on();
+                }
 
-        const img31 = document.getElementById('img31');
-        const img32 = document.getElementById('img32');
-        const img33 = document.getElementById('img33');
-        const img34 = document.getElementById('img34');
-        const img35 = document.getElementById('img35');
-        const img36 = document.getElementById('img36');
-
-        const img41 = document.getElementById('img41');
-        const img42 = document.getElementById('img42');
-        const img43 = document.getElementById('img43');
-        const img44 = document.getElementById('img44');
-        const img45 = document.getElementById('img45');
-        const img46 = document.getElementById('img46');
-
-
-        function change1(){
-            img21.classList.remove('active');
-            img22.classList.remove('active');
-            img23.classList.remove('active');
-            img24.classList.remove('active');
-            img25.classList.remove('active');
-            img26.classList.remove('active');
-
-            img31.classList.remove('active');
-            img32.classList.remove('active');
-            img33.classList.remove('active');
-            img34.classList.remove('active');
-            img35.classList.remove('active');
-            img36.classList.remove('active');
-
-            img41.classList.remove('active');
-            img42.classList.remove('active');
-            img43.classList.remove('active');
-            img44.classList.remove('active');
-            img45.classList.remove('active');
-            img46.classList.remove('active');
-
-            img11.classList.add('active');
-            img12.classList.add('active');
-            img13.classList.add('active');
-            img14.classList.add('active');
-            img15.classList.add('active');
-            img16.classList.add('active');
+                img11.style.left='450px';
+                img11.style.right='0%';
+                img12.style.top='120px';
+                img12.style.bottom='0%';
+                img13.style.left='850px';
+                img13.style.right='0%';
+                img14.style.top="305px";
+                img14.style.bottom='0%';
+                img15.style.left='750px';
+                img15.style.right='0%';
+                img16.style.left='450px';
+                img16.style.right='0%';
+            }, 2000); // 2000 milliseconds = 2 second
         }
-        function change2(){
-            img11.classList.remove('active');
-            img12.classList.remove('active');
-            img13.classList.remove('active');
-            img14.classList.remove('active');
-            img15.classList.remove('active');
-            img16.classList.remove('active');
-
-            img31.classList.remove('active');
-            img32.classList.remove('active');
-            img33.classList.remove('active');
-            img34.classList.remove('active');
-            img35.classList.remove('active');
-            img36.classList.remove('active');
-
-            img41.classList.remove('active');
-            img42.classList.remove('active');
-            img43.classList.remove('active');
-            img44.classList.remove('active');
-            img45.classList.remove('active');
-            img46.classList.remove('active');
-
-            img21.classList.add('active');
-            img22.classList.add('active');
-            img23.classList.add('active');
-            img24.classList.add('active');
-            img25.classList.add('active');
-            img26.classList.add('active');
+        function grid1on(){
+            img11.style.backgroundImage = "url('booker/book1.jpg')";
+            img12.style.backgroundImage = "url('booker/book2.jpg')";
+            img13.style.backgroundImage = "url('booker/book3.jpg')";
+            img14.style.backgroundImage = "url('booker/book4.jpg')";
+            img15.style.backgroundImage = "url('booker/book5.jpg')";
+            img16.style.backgroundImage = "url('booker/book6.jpg')";
         }
-        function change3(){
-            img11.classList.remove('active');
-            img12.classList.remove('active');
-            img13.classList.remove('active');
-            img14.classList.remove('active');
-            img15.classList.remove('active');
-            img16.classList.remove('active');
-
-            img21.classList.remove('active');
-            img22.classList.remove('active');
-            img23.classList.remove('active');
-            img24.classList.remove('active');
-            img25.classList.remove('active');
-            img26.classList.remove('active');
-
-            img41.classList.remove('active');
-            img42.classList.remove('active');
-            img43.classList.remove('active');
-            img44.classList.remove('active');
-            img45.classList.remove('active');
-            img46.classList.remove('active');
-
-            img31.classList.add('active');
-            img32.classList.add('active');
-            img33.classList.add('active');
-            img34.classList.add('active');
-            img35.classList.add('active');
-            img36.classList.add('active');
+        function grid2on(){
+            img11.style.backgroundImage = "url('durant/durant1.jpg')";
+            img12.style.backgroundImage = "url('durant/durant2.jpg')";
+            img13.style.backgroundImage = "url('durant/durant3.jpg')";
+            img14.style.backgroundImage = "url('durant/durant4.jpg')";
+            img15.style.backgroundImage = "url('durant/durant5.jpg')";
+            img16.style.backgroundImage = "url('durant/durant6.jpg')";
         }
-        function change4(){
-            img11.classList.remove('active');
-            img12.classList.remove('active');
-            img13.classList.remove('active');
-            img14.classList.remove('active');
-            img15.classList.remove('active');
-            img16.classList.remove('active');
-
-            img21.classList.remove('active');
-            img22.classList.remove('active');
-            img23.classList.remove('active');
-            img24.classList.remove('active');
-            img25.classList.remove('active');
-            img26.classList.remove('active');
-
-            img31.classList.remove('active');
-            img32.classList.remove('active');
-            img33.classList.remove('active');
-            img34.classList.remove('active');
-            img35.classList.remove('active');
-            img36.classList.remove('active');
-
-            img41.classList.add('active');
-            img42.classList.add('active');
-            img43.classList.add('active');
-            img44.classList.add('active');
-            img45.classList.add('active');
-            img46.classList.add('active');
+        function grid3on(){
+            img11.style.backgroundImage = "url('lebron/lebron1.jpg')";
+            img12.style.backgroundImage = "url('lebron/lebron2.jpg')";
+            img13.style.backgroundImage = "url('lebron/lebron3.jpg')";
+            img14.style.backgroundImage = "url('lebron/lebron4.jpg')";
+            img15.style.backgroundImage = "url('lebron/lebron5.jpg')";
+            img16.style.backgroundImage = "url('lebron/lebron6.jpg')";
         }
-        
+        function grid4on(){
+            img11.style.backgroundImage = "url('edwards/edward1.jpg')";
+            img12.style.backgroundImage = "url('edwards/edward2.jpg')";
+            img13.style.backgroundImage = "url('edwards/edward3.jpg')";
+            img14.style.backgroundImage = "url('edwards/edward4.jpg')";
+            img15.style.backgroundImage = "url('edwards/edward5.jpg')";
+            img16.style.backgroundImage = "url('edwards/edward6.jpg')";
+        }
     </script>
 </body>
 </html>

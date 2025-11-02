@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>collage photos of basketball players</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <style>
+        body {
+            color: #000000;
+            background-color: #87CEEB;
+        }
+        p.intro {
+            color: #000080; 
+            font-family: Alice, Arial, Helvetica, sans-serif;
+            font-size: 24px;
+        }
+        h1 {
+            font-size: 36px;
+            padding: 0px;
+            margin: 2px;
+        }
+        h2 {
+            font-size: 32px;
+        }
+        h3 {
+            font-size: 28px;
+        }
+        h4 {
+            font-size: 24px;
+        }
+        h5 {
+            font-size: 20px;
+        }
+        h6 {
+            font-size: 18px;
+        }
+        div.item{
+            padding: 10px;
+        }
+        table{
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        td{
+            font-size: 20px;
+        }
+        .btn{
+            font-size: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        .button1{
+            color:rgb(253, 181, 48);
+            background-color:rgb(135, 29, 135);
+        }
+        .button2{
+            color:black;
+            background-color:rgb(206, 17, 65);
+        }
+        .button3{
+            color:purple;
+            background-color:yellow;
+        }
+        .button4{
+            color:rgba(10, 10, 253, 0.971);
+            background-color: gray;
+        }
+        .image-container img {
+            /* position: absolute; */
+            width: 0px;
+            /* height: 100%; */
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+
+        .image-container img.active {
+            opacity: 1;
+            width: 200px;
+        }
+        .pg-row{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            width: 600px;
+        }
+        .pg-row div{
+            background-size: cover;
+            background-position: center;
+            margin: 2px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container" style="text-align: center;"> 
+        <h1>Collage photos of NBA-players</h1>
+        <div class="pg-row">
+            <div id="img11" style="
+                width: 196px;
+                height: 180px;
+                background-image: url('booker/book1.jpg');
+                ">
+            </div>
+
+            <div id="img12" style="
+                width: 196px;
+                height: 180px;
+                background-image: url('booker/book2.jpg');
+                ">
+            </div>
+
+            <div id="img13" style="
+                width: 196px;
+                height: 180px;
+                background-image: url('booker/book3.jpg');
+                ">
+            </div>
+
+            <div id="img14" style="
+                width: 596px;
+                height: 280px;
+                background-image: url('booker/book4.jpg');
+                ">
+            </div>
+
+            <div id="img15" style="
+                width: 296px;
+                height: 200px;
+                background-image: url('booker/book5.jpg');
+                ">
+            </div>
+
+            <div id="img16" style="
+                width: 296px;
+                height: 200px;
+                background-image: url('booker/book6.jpg');
+                ">
+            </div>
+        </div>
+
+        <div style="margin: 0 auto; margin-top: 10px;">
+            <button id="button1" class="btn button1" onclick="change1();">Devin Booker</button>
+            <button id="button2" class="btn button2" onclick="change2();">Kevin Durant</button>
+            <button id="button3" class="btn button3" onclick="change3();">Lebron James</button>
+            <button id="button4" class="btn button4" onclick="change4();">Anothny Edwards</button>
+        </div>
+    </div>
+    <script>
+        const img11 = document.getElementById('img11');
+        const img12 = document.getElementById('img12');
+        const img13 = document.getElementById('img13');
+        const img14 = document.getElementById('img14');
+        const img15 = document.getElementById('img15');
+        const img16 = document.getElementById('img16');
+
+        const img21 = document.getElementById('img21');
+        const img22 = document.getElementById('img22');
+        const img23 = document.getElementById('img23');
+        const img24 = document.getElementById('img24');
+        const img25 = document.getElementById('img25');
+        const img26 = document.getElementById('img26');
+
+        const img31 = document.getElementById('img31');
+        const img32 = document.getElementById('img32');
+        const img33 = document.getElementById('img33');
+        const img34 = document.getElementById('img34');
+        const img35 = document.getElementById('img35');
+        const img36 = document.getElementById('img36');
+
+        const img41 = document.getElementById('img41');
+        const img42 = document.getElementById('img42');
+        const img43 = document.getElementById('img43');
+        const img44 = document.getElementById('img44');
+        const img45 = document.getElementById('img45');
+        const img46 = document.getElementById('img46');
+
+
+        function change1(){
+            // img21.classList.remove('active');
+            // img22.classList.remove('active');
+            // img23.classList.remove('active');
+            // img24.classList.remove('active');
+            // img25.classList.remove('active');
+            // img26.classList.remove('active');
+
+            // img31.classList.remove('active');
+            // img32.classList.remove('active');
+            // img33.classList.remove('active');
+            // img34.classList.remove('active');
+            // img35.classList.remove('active');
+            // img36.classList.remove('active');
+
+            // img41.classList.remove('active');
+            // img42.classList.remove('active');
+            // img43.classList.remove('active');
+            // img44.classList.remove('active');
+            // img45.classList.remove('active');
+            // img46.classList.remove('active');
+
+            // img11.classList.add('active');
+            // img12.classList.add('active');
+            // img13.classList.add('active');
+            // img14.classList.add('active');
+            // img15.classList.add('active');
+            // img16.classList.add('active');
+        }
+        function change2(){
+            img11.classList.remove('active');
+            img12.classList.remove('active');
+            img13.classList.remove('active');
+            img14.classList.remove('active');
+            img15.classList.remove('active');
+            img16.classList.remove('active');
+
+            img31.classList.remove('active');
+            img32.classList.remove('active');
+            img33.classList.remove('active');
+            img34.classList.remove('active');
+            img35.classList.remove('active');
+            img36.classList.remove('active');
+
+            img41.classList.remove('active');
+            img42.classList.remove('active');
+            img43.classList.remove('active');
+            img44.classList.remove('active');
+            img45.classList.remove('active');
+            img46.classList.remove('active');
+
+            img21.classList.add('active');
+            img22.classList.add('active');
+            img23.classList.add('active');
+            img24.classList.add('active');
+            img25.classList.add('active');
+            img26.classList.add('active');
+        }
+        function change3(){
+            img11.classList.remove('active');
+            img12.classList.remove('active');
+            img13.classList.remove('active');
+            img14.classList.remove('active');
+            img15.classList.remove('active');
+            img16.classList.remove('active');
+
+            img21.classList.remove('active');
+            img22.classList.remove('active');
+            img23.classList.remove('active');
+            img24.classList.remove('active');
+            img25.classList.remove('active');
+            img26.classList.remove('active');
+
+            img41.classList.remove('active');
+            img42.classList.remove('active');
+            img43.classList.remove('active');
+            img44.classList.remove('active');
+            img45.classList.remove('active');
+            img46.classList.remove('active');
+
+            img31.classList.add('active');
+            img32.classList.add('active');
+            img33.classList.add('active');
+            img34.classList.add('active');
+            img35.classList.add('active');
+            img36.classList.add('active');
+        }
+        function change4(){
+            img11.classList.remove('active');
+            img12.classList.remove('active');
+            img13.classList.remove('active');
+            img14.classList.remove('active');
+            img15.classList.remove('active');
+            img16.classList.remove('active');
+
+            img21.classList.remove('active');
+            img22.classList.remove('active');
+            img23.classList.remove('active');
+            img24.classList.remove('active');
+            img25.classList.remove('active');
+            img26.classList.remove('active');
+
+            img31.classList.remove('active');
+            img32.classList.remove('active');
+            img33.classList.remove('active');
+            img34.classList.remove('active');
+            img35.classList.remove('active');
+            img36.classList.remove('active');
+
+            img41.classList.add('active');
+            img42.classList.add('active');
+            img43.classList.add('active');
+            img44.classList.add('active');
+            img45.classList.add('active');
+            img46.classList.add('active');
+        }
+        
+    </script>
+</body>
+</html>
