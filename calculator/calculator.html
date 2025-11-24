@@ -5,3 +5,224 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <style>
+        .calculator{
+            display: flex;
+            justify-content: center;
+            border: solid 1px red;
+            margin: 0 auto;
+            width: 640px;
+            padding: 10px;
+            background-color: #024DEB;
+        }
+        .number{
+            border: solid 1px black;
+            height: 80px;
+            text-align: right;
+            font-size: 48px;
+            align-content: center;
+            padding: 2%;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+        .btn{
+            font-size: 36px;
+            text-align: center;
+            border: solid 1px black;
+            align-content: center;
+            cursor: pointer;
+        }
+        .square{
+            width:80px;
+            height:80px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background-color: #efefef;
+        }
+        .circle{
+            border-radius: 50%;
+            background-color: #faf5aa;
+        }
+        .btn-color1{
+            background-color: #024DEB;
+            border: solid 6px white;
+        }
+        .btn-color2{
+            background-color: #24856A;
+            border: solid 6px white;
+        }
+        .btn-color3{
+            background-color: #B02525;
+            border: solid 6px white;
+        }
+        .btn-color4{
+            background-color: #DE6210;
+            border: solid 6px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator" id="calculator">
+        <table width="600px">
+            <tr>
+                <td colspan="5"><div class="number" id="number">0</div></td>
+            </tr>
+            <tr>
+                <td><div class="btn square" onclick="doOperation('%');">%</div></td>
+                <td><div class="btn square" onclick="doOperation('➝');">➝</div></td>
+                <td><div class="btn square" onclick="doOperation('+/-');">+/-</div></td>
+                <td><div class="btn square" onclick="doOperation('AC');">AC</div></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><div class="btn square circle" onclick="putDigit('7');">7</div></td>
+                <td><div class="btn square circle" onclick="putDigit('8');">8</div></td>
+                <td><div class="btn square circle" onclick="putDigit('9');">9</div></td>
+                <td rowspan="4">
+                    <div class="btn square" onclick="doOperation('/');">/</div>
+                    <div class="btn square" onclick="doOperation('*');">*</div>
+                    <div class="btn square" onclick="doOperation('-');">-</div>
+                    <div class="btn square" onclick="doOperation('+');">+</div>
+                    <div class="btn square" onclick="run('=');">=</div>
+                </td>
+                <td rowspan="4">
+                    <div class="btn square circle btn-color1" onclick="changeColor(1);"></div>
+                    <div class="btn square circle btn-color2" onclick="changeColor(2);"></div>
+                    <div class="btn square circle btn-color3" onclick="changeColor(3);"></div>
+                    <div class="btn square circle btn-color4" onclick="changeColor(4);"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><div class="btn square circle" onclick="putDigit('4');">4</div></td>
+                <td><div class="btn square circle" onclick="putDigit('5');">5</div></td>
+                <td><div class="btn square circle" onclick="putDigit('6');">6</div></td>
+            </tr>
+            <tr>
+                <td><div class="btn square circle" onclick="putDigit('1');">1</div></td>
+                <td><div class="btn square circle" onclick="putDigit('2');">2</div></td>
+                <td><div class="btn square circle" onclick="putDigit('3');">3</div></td>
+            </tr>
+            <tr>
+                <td><div class="btn square circle" onclick="putDigit('0');">0</div></td>
+                <td><div class="btn square circle" onclick="putDigit('00');">00</div></td>
+                <td><div class="btn square circle" onclick="putDigit('.');">.</div></td>
+            </tr>
+        
+        </table>  
+    </div>        
+    <script>
+        let currentOperation = "";
+        let currentNumber = "";
+        
+        function changeColor(colorId){
+            const calculator = document.getElementById("calculator");
+            if (colorId == 1){
+                calculator.style.backgroundColor = "#024DEB";
+            }
+            else if (colorId == 2){
+                calculator.style.backgroundColor = "#24856A";
+            }
+            else if (colorId == 3){
+                calculator.style.backgroundColor = "#B02525";
+            }
+            else if (colorId == 4){
+                calculator.style.backgroundColor = "#DE6210";
+            }
+        }
+        function putDigit(digit){
+            let number = document.getElementById("number");
+            console.log(digit);
+            if(digit === "."){
+                if(!number.innerText.includes(".")){
+                    if(number.innerText === "0"){
+                        number.innerText = "0.";
+                    } else {
+                        number.innerText += ".";
+                    }
+                }
+                return;
+            }
+            if(number.innerText == "0"){
+                if(digit != "00"){
+                    number.innerText = digit;
+                }
+            }
+            else{
+                number.innerText = number.innerText + digit;
+            }
+        }
+        function doOperation(operation){
+            let number = document.getElementById("number");
+            if(operation == 'AC'){
+                number.innerText = "0";
+            }
+            else if(operation == '%'){
+                currentOperation = '%';
+                number.innerText = number.innerText + "%";
+            }
+            else if (operation == "+"){
+                currentOperation = '+';
+                currentNumber = number.innerText;
+                number.innerText = number.innerText + currentOperation;
+            }
+            else if(operation == "-"){
+                currentOperation = '-';
+                currentNumber = number.innerText;
+                number.innerText = number.innerText + currentOperation;
+            }
+            else if(operation == "*"){
+                currentOperation = '*';
+                currentNumber = number.innerText;
+                number.innerText = number.innerText + currentOperation;
+            }
+            else if(operation == "/"){
+                currentOperation = "/";
+                currentNumber = number.innerText;
+                number.innerText = number.innerText + currentOperation;
+            }
+            else if(operation == "➝"){
+                if(number.innerText.length == 1){
+                    number.innerText = "0";
+                } else {
+                    number.innerText = number.innerText.slice(0, -1);
+                }
+            }
+            else if(operation == "+/-"){
+                let curr = Number(number.innerText);  
+                if(isNaN(curr)){
+                    return; 
+                }
+                number.innerText = String(curr * -1);
+            }
+
+        }
+        function run(run){
+            console.log(currentOperation);
+            let number = document.getElementById("number");
+            if(currentOperation == "%"){
+                let num = parseFloat(number.innerText.replace("%", ''));
+                console.log(num / 100)
+                number.innerText = num / 100;
+            }
+            else if(currentOperation == "+"){
+                let nlist = number.innerText.split('+', 2)
+                number.innerText = parseFloat(nlist[0]) + parseFloat(nlist[1])
+            }
+            else if(currentOperation == "-"){
+                let nlist = number.innerText.split('-', 2)
+                number.innerText = parseFloat(nlist[0]) - parseFloat(nlist[1])
+            }
+            else if(currentOperation == "*"){
+                let nlist = number.innerText.split('*', 2)
+                number.innerText = parseFloat(nlist[0]) * parseFloat(nlist[1])
+            }
+            else if(currentOperation == "/"){
+                let nlist = number.innerText.split('/', 2)
+                number.innerText = parseFloat(nlist[0]) / parseFloat(nlist[1])
+            }
+        }
+        
+    </script>
+    
+</body>
+        

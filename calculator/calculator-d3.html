@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My own Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <style>
+        .calculator{
+            display: flex;
+            justify-content: center;
+            border: solid 1px red;
+            margin: 0 auto;
+            width: 640px;
+            padding: 10px;
+            background-color: #024DEB;
+        }
+        .number{
+            border: solid 1px black;
+            height: 80px;
+            text-align: right;
+            font-size: 48px;
+            align-content: center;
+            padding: 2%;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+        .btn{
+            font-size: 36px;
+            text-align: center;
+            border: solid 1px black;
+            align-content: center;
+            cursor: pointer;
+        }
+        .square{
+            width:80px;
+            height:80px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background-color: #efefef;
+        }
+        .circle{
+            border-radius: 50%;
+            background-color: #faf5aa;
+        }
+        .btn-color1{
+            background-color: #024DEB;
+            border: solid 6px white;
+        }
+        .btn-color2{
+            background-color: #24856A;
+            border: solid 6px white;
+        }
+        .btn-color3{
+            background-color: #B02525;
+            border: solid 6px white;
+        }
+        .btn-color4{
+            background-color: #DE6210;
+            border: solid 6px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator" id="calculator">
+        <table width="600px">
+            <tr>
+                <td colspan="5"><div class="number">0</div></td>
+            </tr>
+            <tr>
+                <td><div class="btn square">%</div></td>
+                <td><div class="btn square">➝</div></td>
+                <td><div class="btn square">+/-</div></td>
+                <td><div class="btn square">AC</div></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><div class="btn square circle">7</div></td>
+                <td><div class="btn square circle">8</div></td>
+                <td><div class="btn square circle">9</div></td>
+                <td rowspan="4">
+                    <div class="btn square">/</div>
+                    <div class="btn square">*</div>
+                    <div class="btn square">-</div>
+                    <div class="btn square">+</div>
+                    <div class="btn square">=</div>
+                </td>
+                <td rowspan="4">
+                    <div class="btn square circle btn-color1" onclick="changeColor(1);"></div>
+                    <div class="btn square circle btn-color2" onclick="changeColor(2);"></div>
+                    <div class="btn square circle btn-color3" onclick="changeColor(3);"></div>
+                    <div class="btn square circle btn-color4" onclick="changeColor(4);"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><div class="btn square circle">4</div></td>
+                <td><div class="btn square circle">5</div></td>
+                <td><div class="btn square circle">6</div></td>
+            </tr>
+            <tr>
+                <td><div class="btn square circle">1</div></td>
+                <td><div class="btn square circle">2</div></td>
+                <td><div class="btn square circle">3</div></td>
+            </tr>
+            <tr>
+                <td><div class="btn square circle">0</div></td>
+                <td><div class="btn square circle">00</div></td>
+                <td><div class="btn square circle">.</div></td>
+            </tr>
+        
+        </table>  
+    </div>        
+    <script>
+        function changeColor(colorId){
+            const calculator = document.getElementById("calculator");
+            if (colorId == 1){
+                calculator.style.backgroundColor = "#024DEB";
+            }
+            else if (colorId == 2){
+                calculator.style.backgroundColor = "#24856A";
+            }
+            else if (colorId == 3){
+                calculator.style.backgroundColor = "#B02525";
+            }
+            else if (colorId == 4){
+                calculator.style.backgroundColor = "#DE6210";
+            }
+        }
+    </script>
+</body>
+        
