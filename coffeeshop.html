@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PAMMA Coffee | Since 2017</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff; 
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 15px 5%;
+      border-bottom: 1px solid #f0f0f0;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .pammacoffeelogo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pammacoffeelogo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-name {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 14px;
+      color: #999;
+      cursor: pointer;
+      margin-left: 25px;
+      padding: 5px 0;
+    }
+
+    nav button.active {
+      color: #d7b99e;
+      box-shadow: 0 2px 0 #d7b99e;
+    }
+
+    .view { display: none; }
+    .view.active { display: block; }
+
+    .hero {
+      height: 50vh;
+      background: rgba(0, 0, 0, 0.4) url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+      background-blend-mode: darken;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 40px;
+      max-width: 700px;
+      margin: 10px 20px;
+    }
+    .content-block {
+      text-align: center;
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+.boba-cake {
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.bubble-tea {
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.coffee {
+  display: flex;
+  padding-bottom: 40px;
+}
+.boba-cake img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.bubble-tea img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.coffee img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-row {
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  gap: 40px;           
+  margin: 40px 0;            
+}
+
+.boba-cake img,
+.bubble-tea img,
+.coffee img {
+  width: 250px;
+  height: 250px;          
+  object-fit: cover; 
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.boba-cake img:hover,
+.bubble-tea img:hover,
+.coffee img:hover {
+  transform: scale(1.1);
+}
+    .contact-banner {
+      background: #fafaf9;
+      padding: 60px 20px;
+      border-top: 1px solid #eee;
+      margin-left:5px;
+    }
+
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      margin-left:5px;
+    }
+
+    .info-item h4 {
+      font-family: "Playfair Display", serif;
+      color: #d7b99e;
+      margin-bottom: 8px;
+      margin-left:10px;
+    }
+
+    .menu-wrap { 
+      max-width: 700px; 
+      margin: 60px auto; 
+      padding: 0 25px; 
+    }
+
+    .drink-item { 
+      display: flex; 
+      justify-content: space-between; 
+      padding: 18px 0; 
+      border-bottom: 1px solid #f7f7f7; 
+    }
+
+    .footer-bottom {
+      background-color: #d8b596;
+      padding: 40px 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left .brand .footer-address{
+  font-weight: 700;
+  font-family:"Playfair Display", serif;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.footer-left .copyright {
+  font-size: 14px;
+  color: #6d4c41;
+}
+
+.footer-right {
+  font-size: 16px;
+}
+
+.footer-right a {
+  text-decoration: underline;
+  color: #6d4c41;
+  margin: 0 6px;
+}
+
+.footer-right span {
+  color: #6d4c41;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="pammacoffeelogo">
+      <img src="images/pammacoffeelogo.jpg" alt="Pamma Logo">
+      <span class="logo-name">PAMMA COFFEE</span>
+    </div>
+
+    <nav>
+      <button class="active" onclick="tab('home', this)">About Us</button>
+      <button onclick="tab('menu', this)">Signature Drinks</button>
+    </nav>
+  </header>
+
+  <div id="home" class="view active">
+    <div class="hero">
+      <p style="text-transform: uppercase; font-size: 13px; letter-spacing: 3px;">《泮咖啡PAMMA COFFEE》</p>
+      <h1>Where the coffee's as warm as the welcome</h1>
+    </div>
+
+    <div class="content-block">
+      <h2 style="font-family: 'Playfair Display'; font-size: 30px; margin-bottom: 15px;">Since 2017</h2>
+      <p style="color: #555; font-size: 16px;">
+        Our scenic restaurant on the first row of Zuoying Lake, offering sunset views, coffee, and handmade desserts. 
+        A popular choice for brunch and dinner gatherings, featuring the aroma of homemade baking. 
+        Make a delicious souvenir from Kaohsiung.
+      </p>
+      <p style="color: #000000; font-weight: 200; margin-top: 20px;">
+        左營湖畔第一排景觀餐廳｜夕陽 × 咖啡 × 手作甜點<br>
+        人氣早午餐與晚餐聚會首選，自家烘焙香氣，伴手禮帶走高雄味。
+      </p>
+    </div>
+
+<div class="image-row">
+  <div class="boba-cake">
+    <img src="images/bobacake.jpg" alt="Boba Cake">
+  </div>
+  <div class="bubble-tea">
+    <img src="images/bubbletea.jpg" alt="Bubble Tea">
+  </div>
+  <div class="coffee">
+    <img src="images/coffee.jpg" alt="Coffee">
+  </div>
+</div>
+ </div> <div id="menu" class="view">
+    <div class="menu-wrap">
+      <h2 style="text-align: center; font-family: 'Playfair Display'; color: #d7b99e; margin-bottom: 40px;">Signature Drinks  招牌飲料</h2>
+      <div class="drink-item"><div>Taiwan Alishan Cafe latte 阿里山雲海拿鐵</div><div style="color:#d7b99e; font-weight:600;">$150</div></div>
+      <div class="drink-item"><div>Taiwan Alishan Cafe Americano 阿里山日出美式咖啡</div><div style="color:#d7b99e; font-weight:600;">$150</div></div>
+      <div class="drink-item"><div>Brown Sugar Cafe Latte 沖繩黑糖咖啡</div><div style="color:#d7b99e; font-weight:600;">$130</div></div>
+      <div class="drink-item"><div>Bubble Cafe Latte 波霸拿鐵咖啡</div><div style="color:#d7b99e; font-weight:600;">$150</div></div>
+      <div class="drink-item"><div>Fresh Milk Tea 極品鮮奶茶</div><div style="color:#d7b99e; font-weight:600;">$130</div></div>
+      <div class="drink-item"><div>Citron Flavour Black Tea 釜山風味柚香茶</div><div style="color:#d7b99e; font-weight:600;">$120</div></div>
+      <div class="drink-item"><div>Brown Sugar Milk Tea 黑糖舒芙蕾蓋奶茶</div><div style="color:#d7b99e; font-weight:600;">$130</div></div>
+      <div class="drink-item"><div>Caramel Chocolate with Sea Salt and Cream 焦糖海鹽奶蓋可可</div><div style="color:#d7b99e; font-weight:600;">$180</div></div>
+      <div class="drink-item"><div>Taiwan Black Tea 佛手柑香手燻紅茶</div><div style="color:#d7b99e; font-weight:600;">$120</div></div>
+      <div class="drink-item"><div>Japanese Tea with Roasted Brown Rice 手工炭焙玄米茶</div><div style="color:#d7b99e; font-weight:600;">$120</div></div>
+      <div class="drink-item"><div>Sun Moon Lake Ruby Black Tea 頂級日月潭紅玉紅茶</div><div style="color:#d7b99e; font-weight:600;">$160</div></div>
+    </div>
+  </div>
+
+    <footer class="footer-bottom">
+  <div class="footer-container">
+    <div class="footer-left">
+      <p class="brand">PAMMA COFFEE</p>
+      <p class="copyright">
+        2021 © Pamma Coffee. All rights reserved.
+      <p class="footer-address"></p>
+      高雄市左營區蓮潭路176號<br>
+      No. 176, Liantan Rd., Zuoying Dist., Kaohsiung City 813, Taiwan
+      </p>
+    </div>
+
+    <div class="footer-right">
+       <a href="tel:075856868">Let's chat</a>
+      <span>/</span>
+      <a href="https://www.instagram.com/pammacoffeeks">Instagram</a> /
+      <a href="https://www.facebook.com/PAMMACoffee">Facebook</a>
+    </div>
+  </div>
+  </footer>
+
+  <script>
+    function tab(id, btn) {
+      // 1. Hide pages
+      const views = document.querySelectorAll('.view');
+      views.forEach(v => v.className = 'view');
+      
+      // 2. Reset buttons
+      const btns = document.querySelectorAll('nav button');
+      btns.forEach(b => b.className = '');
+      
+      // 3. Show active
+      document.getElementById(id).className = 'view active';
+      btn.className = 'active'; 
+    }
+  </script>
+
+</body>
