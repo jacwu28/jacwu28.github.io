@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    background: #001f3f; /* Dark blue background */
+  }
+  
+  /* Style for each snowflake */
+  .snowflake {
+    position: absolute;
+    top: -10px; /* Start slightly above the screen */
+    animation: fall linear infinite; /* Define the falling animation */
+  }
+  
+  /* Falling animation */
+  @keyframes fall {
+    to {
+      transform: translateY(100vh); /* Move snowflakes from top to bottom */
+    }
+  }

@@ -1,0 +1,229 @@
+Ashley Tan, 1 min
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PAMMA Coffee | Since 2017</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff; 
+      color: #222;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 14px;
+      color: #999;
+      cursor: pointer;
+      margin-left: 25px;
+      padding: 5px 0;
+    }
+    nav button.active {
+      color: #d7b99e;
+      box-shadow: 0 2px 0 #d7b99e;
+    }
+
+    .view { display: none; }
+    .view.active { display: block; }
+
+    .hero {
+      height: 55vh;
+      background: rgba(0, 0, 0, 0.4) url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+      background-blend-mode: darken;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      max-width: 700px;
+    }
+    .contact-banner {
+      background: #fafaf9;
+      padding: 70px 20px;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .info-item h4 {
+      font-family: "Playfair Display", serif;
+      color: #d7b99e;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    .info-item p, .info-item a {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+      margin: 4px 0;
+      display: block;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0 8px;
+      font-weight: 600;
+      color: #444;
+    }
+    .social-links a:hover { color: #d7b99e; }
+
+    .menu-wrap { 
+      max-width: 700px; 
+      margin: 80px auto; 
+      padding: 0 25px; 
+    }
+    .drink-item { 
+      display: flex; 
+      justify-content: space-between; 
+      padding: 18px 0; 
+      border-bottom: 1px solid #f7f7f7; 
+    }
+    .drink-price { 
+      font-weight: 600; 
+      color: #d7b99e; 
+    }
+    footer {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fafaf9;
+  border-top: 1px solid #eee;
+}
+
+    footer h4 {
+  margin-top: 25px;
+  color: #d7b99e;
+}
+
+    footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+    footer a {
+  text-decoration: none;
+  color: #444;
+}
+
+    footer a:hover {
+  color: #d7b99e;
+}
+  .image-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+}
+
+.image-row img {
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">PAMMA COFFEE</div>
+    <nav>
+      <button class="active" onclick="tab('home', this)">About Us</button>
+      <button onclick="tab('menu', this)">Signature Drinks</button>
+    </nav>
+  </header>
+
+  <div id="home" class="view active">
+    <div class="hero">
+      <p style="text-transform: uppercase; font-size: 11px; letter-spacing: 3px;">《泮咖啡PAMMA COFFEE》</p>
+      <h1>Where the coffee's as warm as the welcome</h1>
+    </div>
+
+   <div class="image-row">
+  <img src="images/bobacake.jpg" alt="Boba Cake">
+  <img src="images/bubbletea.jpg" alt="Bubble Tea">
+  <img src="images/coffee.jpg" alt="Coffee">
+</div>
+
+
+  <div id="menu" class="view">
+    <div class="menu-wrap">
+      <h2 style="text-align: center; font-family: 'Playfair Display'; color: #d7b99e; font-size: 32px; margin-bottom: 40px;">Signature Drinks</h2>
+      
+      <div class="drink-item"><div class="drink-name">Taiwan Alishan Cafe latte 阿里山雲海拿鐵</div><div class="drink-price">$150</div></div>
+      <div class="drink-item"><div class="drink-name">Taiwan Alishan Cafe Americano 阿里山日出美式咖啡</div><div class="drink-price">$150</div></div>
+      <div class="drink-item"><div class="drink-name">Brown Sugar Cafe Latte 沖繩黑糖咖啡</div><div class="drink-price">$130</div></div>
+      <div class="drink-item"><div class="drink-name">Bubble Cafe Latte 波霸拿鐵咖啡</div><div class="drink-price">$150</div></div>
+      <div class="drink-item"><div class="drink-name">Fresh Milk Tea 極品鮮奶茶</div><div class="drink-price">$130</div></div>
+      <div class="drink-item"><div class="drink-name">Citron Flavour Black Tea 釜山風味柚香茶</div><div class="drink-price">$120</div></div>
+      <div class="drink-item"><div class="drink-name">Brown Sugar Milk Tea 黑糖舒芙蕾蓋奶茶</div><div class="drink-price">$130</div></div>
+      <div class="drink-item"><div class="drink-name">Caramel Chocolate with Sea Salt and Cream 焦糖海鹽奶蓋可可</div><div class="drink-price">$180</div></div>
+      <div class="drink-item"><div class="drink-name">Taiwan Black Tea 佛手柑香手燻紅茶</div><div class="drink-price">$120</div></div>
+      <div class="drink-item"><div class="drink-name">Japanese Tea with Roasted Brown Rice 手工炭焙玄米茶</div><div class="drink-price">$120</div></div>
+      <div class="drink-item"><div class="drink-name">Sun Moon Lake Ruby Black Tea 頂級日月潭紅玉紅茶</div><div class="drink-price">$160</div></div>
+    </div>
+  </div>
+
+  <footer>
+  <h4>Visit Us</h4>
+  <p>高雄市左營區蓮潭路176號</p>
+  <p>No. 176, Liantan Rd., Zuoying Dist., Kaohsiung City</p>
+
+  <h4>Call Us</h4>
+  <p>07-585-6868</p>
+
+  <h4>Follow Us</h4>
+  <p>
+    <a href="https://www.instagram.com/pammacoffeeks" target="_blank">Instagram</a>
+    |
+    <a href="https://www.facebook.com/PAMMACoffee" target="_blank">Facebook</a>
+  </p>
+
+  <p style="margin-top:20px; font-size:12px; color:#999;">
+    © 2017–2026 PAMMA Coffee
+  </p>
+</footer>
+
+  <script>
+    function tab(id, btn) {
+      const views = document.querySelectorAll('.view');
+      views.forEach(v => v.className = 'view');
+      const btns = document.querySelectorAll('nav button');
+      btns.forEach(b => b.className = '');
+      document.getElementById(id).className = 'view active';
+      btn.className = 'active'; 
+    }
+  </script>
+
+</body>
+</html>
